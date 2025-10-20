@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 
 # [user]
-# 	name = Vini
-# 	email = viniciuszucatti@gmail.com
+#   name = Vini
+#   email = viniciuszucatti@gmail.com
 
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -15,5 +15,7 @@
 	editor = nvim
 # 	editor = code --wait
 
-[includeIf "gitdir:~/dotfiles/"]
-	path = ~/.gitconfig-dotfiles
+
+[includeIf "gitdir:${HOME}/dotfiles/"]
+    path = ${HOME}/dotfiles/.gitconfig-dotfiles
+
