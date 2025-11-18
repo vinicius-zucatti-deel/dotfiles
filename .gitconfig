@@ -1,12 +1,20 @@
-# This is Git's per-user configuration file.
 [user]
-	name = Vini
-	email = viniciuszucatti@gmail.com
+	name = Vinicius Zucatti
+	email = vinicius.zucatti@deel.com
+
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	se = !git rev-list --all | xargs git grep -F
 	last = log -1 HEAD --stat
-	syncdev = !git fetch origin && git reset --hard origin/develop
-	current = !git rev-parse --abbrev-ref HEAD
+	newDev = !git checkout dev && git fetch origin && git reset --hard origin/dev
+  current = !git rev-parse --abbrev-ref HEAD
+  wip =  !git add . && git commit -m "WIP"
+
 [core]
-	editor = code --wait
+	editor = nvim
+# 	editor = code --wait
+
+
+[includeIf "gitdir:${HOME}/"]
+    path = ${HOME}/.gitconfig-dotfiles
+
