@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Vini
+	email = viniciuszucatti@gmail.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	se = !git rev-list --all | xargs git grep -F
+	last = log -1 HEAD --stat
+	syncdev = !git fetch origin && git reset --hard origin/develop
+	current = !git rev-parse --abbrev-ref HEAD
+[core]
+	editor = code --wait
