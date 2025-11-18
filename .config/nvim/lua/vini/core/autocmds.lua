@@ -51,3 +51,12 @@ create_command("MyHelp", ":vsplit ~/.config/nvim/lua/vini/help.md", { nargs = 0,
 --    end,
 --    desc = "Auto-hover LSP docs on cursor hold",
 -- })
+
+create_command("FreshStart", function()
+  -- Clear marks
+  vim.cmd("delm a-zA-Z")
+  -- Del all buffers
+  vim.cmd("bufdo bd!")
+  -- -- Go to README.md
+  vim.cmd("edit README.md")
+end, {})

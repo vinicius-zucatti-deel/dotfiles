@@ -1,5 +1,17 @@
 # My own help file
 
+## seach global string
+
+:vim /pattern/flag path
+:vimgrep /compensationManagementNotReadyForRelease/g app/src/scenes/Settings/scenes/OrganizationSettings/components/CompManagement/\*_/_.test.tsx | copen
+
+:copen Open the quickfix window
+:cclose Close the quickfix window
+:cnext Go to the next location
+:cprevious Go to the previous location
+
+https://irian.to/blogs/vimgrep-tips-and-tricks#searching-for-a-string-inside-files-ending-with-particular-extensions
+
 ## replace string on a file
 
 :%s/foo//g
@@ -37,6 +49,8 @@ vib
 ```
 
 https://github.com/kylechui/nvim-surround
+
+Select text → press S" → it wraps the selection with quotes.
 
 The three "core" operations of add/delete/change can be done with the keymaps ys{motion}{char}, ds{char}, and cs{target}{replacement}, respectively. For the following examples, \* will denote the cursor position:
 
